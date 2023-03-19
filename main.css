@@ -9,7 +9,19 @@ header {
     background: linear-gradient(to right,red, orange, yellow, green, blue,darkblue, darkslateblue);
     color: lightgreen;
     padding: 15px;
-    font-size: 16pt
+    font-size: 16pt;
+    transition: color, background, font-size, 2s;
+}
+
+header:hover {
+    color: rgb(56, 121, 56);
+    font-size: 20pt;
+}
+
+header:active {
+    background: linear-gradient(to left,red, orange, yellow, green, blue,darkblue, darkslateblue);
+    color: rgb(56, 121, 56);
+    font-size: 12pt;
 }
 
 footer {
@@ -19,7 +31,19 @@ footer {
     font-size: 14pt;
     font-style:  italic;
     text-align: right;
-    padding: 5px
+    padding: 5px;
+    transition: color, background, font-size, 2s;
+}
+
+footer:hover {
+    color: rgb(56, 121, 56);
+    font-size: 20pt;
+}
+
+footer:active {
+    background: linear-gradient(to left,red, orange, yellow, green, blue,darkblue, darkslateblue);
+    color: rgb(56, 121, 56);
+    font-size: 12pt;
 }
 
 a {
@@ -31,7 +55,6 @@ a {
 
 a:visited {
     color:blue;
-    transition-duration: all 4s;
 }
 
 a:hover {
