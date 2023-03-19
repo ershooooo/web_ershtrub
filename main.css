@@ -6,14 +6,14 @@ body {
 }
 
 header {
-    background-color: black;
+    background: linear-gradient(to right,red, orange, yellow, green, blue,darkblue, darkslateblue);
     color: lightgreen;
     padding: 15px;
     font-size: 16pt
 }
 
 footer {
-    background-color: black;
+    background: linear-gradient(to right,red, orange, yellow, green, blue,darkblue, darkslateblue);
     color: lightgreen;
     margin: 0px;
     font-size: 14pt;
