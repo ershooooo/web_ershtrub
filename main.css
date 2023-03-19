@@ -25,10 +25,13 @@ footer {
 a {
    color: green; 
    text-decoration: none;
+   transition: text-shadow, color, text-duration, 
+   background-color, font-weight, 3s;
 }
 
 a:visited {
     color:blue;
+    transition-duration: all 4s;
 }
 
 a:hover {
@@ -36,6 +39,8 @@ a:hover {
     text-decoration: underline;
     background-color: white;
     font-weight: bold;
+    text-shadow: 7px 5px 2px rgb(168, 117, 190);
+    transition: all 0.3s;
 }
 
 a:active {
