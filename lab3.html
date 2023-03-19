@@ -40,6 +40,19 @@
             margin-left: 2cm;
             text-indent: 0;
         }
+        .shadow{
+            text-shadow: 7px 5px 2px rgb(168, 117, 190);
+        }
+        .shadow-blue{
+            text-shadow: -10px 4px 2px rgb(22, 54, 184);
+        }
+        .shadow-blue2{
+            text-shadow: 0px 0px 3px rgb(22, 54, 184);
+        }
+        .h1-shadow:hover{
+            text-shadow: 8px 6px 3px rgb(175, 130, 229);
+            transition: 800ms 1.5s;
+        }
     </style>
 </head>
 <body>
@@ -47,7 +60,7 @@
         НГТУ, ФБ, Лабораторная работа 3
     </header>
     <main>
-        <h1>Расчет (формула)</h1>
+        <h1 class="h1-shadow">Расчет (формула)</h1>
 
         <div>Расчет сводится к определению разницы между активами и пассивами
         (обязательствами), которые определяются следующим образом.
@@ -90,6 +103,13 @@
         <div class="formula">
         Чистые активы = стр.1300 - ЗУ + ДБП
         </div>
+
+        <!--<div class="shadow">Тень</div>
+
+        <div class="shadow-blue">Синяя тень слева снизу</div>
+
+        <div class="shadow-blue2">Синее размытие</div>-->
+
     </main>
     <footer>
         &copy;Трубицына А.В, Ершова К.А., ФБИ-12, 2 курс, 2023
