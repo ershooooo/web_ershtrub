@@ -10,7 +10,7 @@ header {
     color: lightgreen;
     padding: 15px;
     font-size: 16pt;
-    transition: color, background, font-size, 2s;
+    transition: color, font-size, 2s;
 }
 
 header:hover {
@@ -32,7 +32,7 @@ footer {
     font-style:  italic;
     text-align: right;
     padding: 5px;
-    transition: color, background, font-size, 2s;
+    transition: color, font-size, 2s;
 }
 
 footer:hover {
