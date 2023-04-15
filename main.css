@@ -13,6 +13,11 @@ header {
     transition: color, font-size, 2s;
 }
 
+main {
+    margin: 10px 20px;
+}
+
+
 header:hover {
     color: rgb(56, 121, 56);
     font-size: 20pt;
