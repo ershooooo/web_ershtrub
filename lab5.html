@@ -17,6 +17,36 @@
             alert('Сумма ' +a+ ' и ' +b+ ' равна ' + result);
         }
 
+        function showRaz(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a - b;
+            alert('Разность ' +a+ ' и ' +b+ ' равна ' + result);
+        }
+
+        function showUmn(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+            
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a * b;
+            alert('Произведение ' +a+ ' и ' +b+ ' равно ' + result);
+        }
+
+        function showDel(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+            
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a / b;
+            alert('Деление ' +a+ ' на ' +b+ ' равно ' + result);
+        }
+
         function showAuthor(){
             let author = 'Рады приветствовать вас на нашем сайте! \nАвторы страницы: \nЕршова Клара Александровна, \nТрубицына Алиса Владимировна';
             alert(author);
@@ -28,12 +58,15 @@
             text-align: center;
             margin-left: 200px;
             right: 200px;
+            top: 50px;
             height: 50px;
             width: 600px;
-            background-color: hotpink;
+            background-color: mediumpurple;
             border: 10px;
             color: aliceblue;
             display: inline-block;
+            border-color: aliceblue;
+            border-radius: 50%; 
         }
     </style>
 </head>
@@ -48,6 +81,9 @@
         <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
 
         <div class="message" onclick="showSum()"><p vertical-align: middle>Найти сумму чисел</p></div>
+        <div class="message" onclick="showRaz()"><p vertical-align: middle>Найти разность чисел</p></div>
+        <div class="message" onclick="showUmn()"><p vertical-align: middle>Найти произведение чисел</p></div>
+        <div class="message" onclick="showDel()"><p vertical-align: middle>Найти деление чисел</p></div>
         <div class="message" onclick="showAuthor()"><p vertical-align: middle>Узнать, кто авторы страницы</p></div>
     </main>
 
