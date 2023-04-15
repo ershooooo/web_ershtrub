@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Трубицына А.В, Ершова К.А.. Лабораторная 5</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum(){
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert('Сумма' +a+ 'и' +b+ 'равна' + result);
+        }
+    </script>
+    <style>
+        .message{
+            cursor: pointer;
+            text-align: center;
+            margin-left: 200px;
+            right: 200px;
+            height: 50px;
+            width: 600px;
+            background-color: hotpink;
+            border: 10px;
+            color: aliceblue;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,6 +36,8 @@
     </header>
 
     <main>
+        <div class="message" onclick="showSum()"><p vertical-align: middle>Сколько будет 5154+7891?</p></div>
+        <div class="message"><p vertical-align: middle>Узнать, кто авторы страницы</p></div>
     </main>
 
     <footer>
