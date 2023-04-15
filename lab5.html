@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="main.css">
     <script>
         function showSum(){
-            let a = 5154;
-            let b = 7891;
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
             let result = a + b;
             alert('Сумма ' +a+ ' и ' +b+ ' равна ' + result);
         }
 
         function showAuthor(){
-            let author = 'Рады приветствовать вас на нашем сайте! \nАвторы страницы: \nЕршова Клара Александровна, \nТрубицына Алиса Владимировна'
-            alert(author)
+            let author = 'Рады приветствовать вас на нашем сайте! \nАвторы страницы: \nЕршова Клара Александровна, \nТрубицына Алиса Владимировна';
+            alert(author);
         }
     </script>
     <style>
@@ -41,7 +44,10 @@
     </header>
 
     <main>
-        <div class="message" onclick="showSum()"><p vertical-align: middle>Сколько будет 5154+7891?</p></div>
+        <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
+        <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+
+        <div class="message" onclick="showSum()"><p vertical-align: middle>Найти сумму чисел</p></div>
         <div class="message" onclick="showAuthor()"><p vertical-align: middle>Узнать, кто авторы страницы</p></div>
     </main>
 
