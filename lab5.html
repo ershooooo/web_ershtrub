@@ -11,7 +11,12 @@
             let a = 5154;
             let b = 7891;
             let result = a + b;
-            alert('Сумма' +a+ 'и' +b+ 'равна' + result);
+            alert('Сумма ' +a+ ' и ' +b+ ' равна ' + result);
+        }
+
+        function showAuthor(){
+            let author = 'Рады приветствовать вас на нашем сайте! \nАвторы страницы: \nЕршова Клара Александровна, \nТрубицына Алиса Владимировна'
+            alert(author)
         }
     </script>
     <style>
@@ -31,16 +36,16 @@
 </head>
 
 <body>
-    <header>
+    <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 5
     </header>
 
     <main>
         <div class="message" onclick="showSum()"><p vertical-align: middle>Сколько будет 5154+7891?</p></div>
-        <div class="message"><p vertical-align: middle>Узнать, кто авторы страницы</p></div>
+        <div class="message" onclick="showAuthor()"><p vertical-align: middle>Узнать, кто авторы страницы</p></div>
     </main>
 
-    <footer>
+    <footer onclick="showAuthor()">
         &copy;Трубицына А.В, Ершова К.А., ФБИ-12, 2 курс, 2023
     </footer>
 </body>
