@@ -51,15 +51,22 @@
             let author = 'Рады приветствовать вас на нашем сайте! \nАвторы страницы: \nЕршова Клара Александровна, \nТрубицына Алиса Владимировна';
             alert(author);
         }
+
+        function changeOutput(buttonNum, backColor, textColor, styleBor){
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.border = '4px';
+            output.style.borderStyle = styleBor;
+            output.style.borderColor = textColor;
+        }
     </script>
     <style>
         .message{
             cursor: pointer;
             text-align: center;
-            margin-left: 200px;
-            right: 200px;
-            top: 50px;
-            height: 50px;
+            margin: 0 30% 0 30%;
             width: 600px;
             background-color: mediumpurple;
             border: 10px;
@@ -67,6 +74,16 @@
             display: inline-block;
             border-color: aliceblue;
             border-radius: 50%; 
+        }
+
+        #output{
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
+        }
+
+        .cen{
+            margin: 0 40% 0 40%;
         }
     </style>
 </head>
@@ -77,14 +94,23 @@
     </header>
 
     <main>
-        <label>Первое число: <input type="number" value="5154" id="numberA"></label><br>
-        <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+        <label class="cen">Первое число: <input type="number" value="5154" id="numberA"></label><br>
+        <label class="cen">Второе число: <input type="number" value="7891" id="numberB"></label><br>
 
         <div class="message" onclick="showSum()"><p vertical-align: middle>Найти сумму чисел</p></div>
         <div class="message" onclick="showRaz()"><p vertical-align: middle>Найти разность чисел</p></div>
         <div class="message" onclick="showUmn()"><p vertical-align: middle>Найти произведение чисел</p></div>
         <div class="message" onclick="showDel()"><p vertical-align: middle>Найти деление чисел</p></div>
         <div class="message" onclick="showAuthor()"><p vertical-align: middle>Узнать, кто авторы страницы</p></div>
+
+        <div class="cen">
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1,'palevioletred','darkkhaki', 'solid')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2,'powderblue','darkblue', 'dotted')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3,'lightsalmon','black', 'double')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4,'slategray','aliceblue','dashed')">
+        </div>
+
+        <div id="output" class="cen"></div>
     </main>
 
     <footer onclick="showAuthor()">
