@@ -61,6 +61,31 @@
             output.style.borderStyle = styleBor;
             output.style.borderColor = textColor;
         }
+
+        function changeCost(){
+            let input1 = document.getElementById('korz1');
+            let input2 = document.getElementById('korz2');
+            let input3 = document.getElementById('korz3');
+            let input4 = document.getElementById('korz4');
+            let input5 = document.getElementById('korz5');
+
+            let k = parseInt(input1.value);
+            let o = parseInt(input2.value);
+            let r = parseInt(input3.value);
+            let z = parseInt(input4.value);
+            let i = parseInt(input5.value);
+
+            let resultkorz = k*80 + o*100 + r*50 + z*65 + i*15;
+
+            let outputkorzi = document.getElementById('outputkorzi');
+            outputkorzi.innerHTML = 'Общая стоимость: ' + resultkorz+ ' руб.';
+        }
+
+        function delet(id){
+            elem = document.getElementById(id); 
+            elem.style.display='none'; 
+        }
+           
     </script>
     <style>
         .message{
@@ -74,6 +99,7 @@
             display: inline-block;
             border-color: aliceblue;
             border-radius: 50%; 
+            margin-top: 10px;
         }
 
         #output{
@@ -82,9 +108,54 @@
             height: 40px;
         }
 
-        .cen{
-            margin: 0 40% 0 40%;
+        #outputkorz{
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
+
+        .cen{
+            margin: 8px 40% 0 40%;
+            text-align: center;
+            
+        }
+
+        .cen1{
+            margin: 10px 40% 0 40%;
+            text-align: center;
+            border: 1px solid;
+        }
+
+        .krugi{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            text-align: center;
+            
+        }
+
+        .krug{
+            border: 1px solid;
+            border-radius: 30px;
+            border-color: rgb(60, 13, 153);
+            color:rgb(60, 13, 153);
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+        }
+
+        .krug1{background-color: bisque;}
+        .krug2{background-color: deeppink;}
+        .krug3{background-color: rgb(90, 255, 84);}
+        .krug4{background-color: lightskyblue;}
+        .krug5{background-color: aquamarine;}
+        .krug6{background-color: rgb(156, 207, 175);}
+        .krug7{background-color: rgb(212, 157, 203);}
+        .krug8{background-color: rgb(230, 233, 189);}
+        .krug9{background-color: rgb(232, 112, 104);}
+        .krug10{background-color: rgb(135, 141, 250);}
+
+
     </style>
 </head>
 
@@ -111,6 +182,34 @@
         </div>
 
         <div id="output" class="cen"></div>
+
+        <div class="cen1">
+            <h2>Корзина товаров</h2>
+            <label> Мафин (80 р/шт): <input type="number" value="2" id="korz1"></label><br>
+            <label> Чизкейк (100 р/шт): <input type="number" value="1" id="korz2"></label><br>
+            <label> Пироженое (50 р/шт): <input type="number" value="1" id="korz3"></label><br>
+            <label> Эклер (65 р/шт): <input type="number" value="4" id="korz4"></label><br>
+            <label> Меренга (15 р/шт): <input type="number" value="1" id="korz5"></label><br>
+
+
+            <input type="button" value="Расчет" onclick="changeCost()">
+
+            <div id="outputkorzi">Общая стоимость:</div>
+        </div>
+
+        <div class="krugi">
+            <div class="krug krug1" id="D1" onclick="delet('D1')"><p vertical-align: middle>1</p></div>
+            <div class="krug krug2" id="D2" onclick="delet('D2')"><p vertical-align: middle>2</p></div>
+            <div class="krug krug3" id="D3" onclick="delet('D3')"><p vertical-align: middle>3</p></div>
+            <div class="krug krug4" id="D4" onclick="delet('D4')"><p vertical-align: middle>4</p></div>
+            <div class="krug krug5" id="D5" onclick="delet('D5')"><p vertical-align: middle>5</p></div>
+            <div class="krug krug6" id="D6" onclick="delet('D6')"><p vertical-align: middle>6</p></div>
+            <div class="krug krug7" id="D7" onclick="delet('D7')"><p vertical-align: middle>7</p></div>
+            <div class="krug krug8" id="D8" onclick="delet('D8')"><p vertical-align: middle>8</p></div>
+            <div class="krug krug9" id="D9" onclick="delet('D9')"><p vertical-align: middle>9</p></div>
+            <div class="krug krug10" id="D10" onclick="delet('D10')"><p vertical-align: middle>10</p></div>
+        </div>
+
     </main>
 
     <footer onclick="showAuthor()">
