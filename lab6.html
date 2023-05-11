@@ -15,6 +15,14 @@
             width: 250px;
             text-align: center;
         }
+        .rules{
+            border: 1px solid;
+            border-radius: 30px;
+            padding: 10px 20px 10px 20px;
+            background-color: darkgray;
+            border-color: darkgray;
+
+        }
     </style>
     <script>
         let number;
@@ -54,7 +62,18 @@
             count = 0;
             result.remove();
         }
-        
+        function Rules() {
+            let screens = document.getElementsByClassName('rules');
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+        }
+        function removeRules() {
+            let screens = document.getElementsByClassName('rules');
+            screens[1].style.display = 'none';
+            screens[0].style.display = 'block';
+        }
+
+
     </script>
 </head>
 
@@ -84,11 +103,27 @@
             <div>
                 Задуманное число: <span id="number"></span>
             </div>
-            <div>
-                Количество попыток: <span id="try-count"></span>
+            <div>Количество попыток: <span id="try-count"></span>
             </div>
             <div>
                 <button onclick="again()">Сыграть еще раз</button>
+            </div> 
+        </div>
+        <div class="rules">
+            <button onclick="Rules()">Показать правила игры</button>
+        </div>
+         <div class="rules" style="display: none;">
+            <div>
+                <button onclick="removeRules()">Скрыть правила игры</button><br>
+                <ol type="A">
+                <li>Нажмите на кнопку "сыграть в игру"</li>
+                <li>Введите число от 1 до 100</li>
+                <li>Нажмите на кнопку угадать</li>
+                <li>Если появилось сообщение "Вы ввели слишком маленькое число", то введите число больше</li>
+                <li>Если появилось сообщение "Вы ввели слишком большое число", то введите число меньше</li>
+                <li>Если вы угадали число, то появится сообщение "Поздравляем, вы выиграли"</li>
+                <li>Чтобы сыграть еще раз, нажмите кнопку "Сыграть еще раз"</li>
+                </ol>
             </div>
         </div>
     </main>
