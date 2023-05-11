@@ -23,6 +23,15 @@
             border-color: darkgray;
 
         }
+        .color{
+            border: 1px solid;
+            padding: 10px 20px 10px 20px;
+            margin-top: 10px;
+            width: 200px;
+            text-align: center;
+            background-color: yellow;
+            
+        }
     </style>
     <script>
         let number;
@@ -72,8 +81,39 @@
             screens[1].style.display = 'none';
             screens[0].style.display = 'block';
         }
-
-
+        function changeColor(div) {
+            if(div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                div.style.color= 'black';
+                document.getElementById('color-name').innerHTML = 'красный';
+                document.getElementById('colorText-name').innerHTML = 'чёрный';
+            }
+            else if(div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                div.style.color= 'white';
+                document.getElementById('color-name').innerHTML = 'чёрный';
+                document.getElementById('colorText-name').innerHTML = 'белый';
+            }
+            else if(div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'green';
+                div.style.color= 'yellow';
+                document.getElementById('color-name').innerHTML = 'зелёный';
+                document.getElementById('colorText-name').innerHTML = 'жёлтый';
+            }
+            else if(div.style.backgroundColor == 'green') {
+                div.style.backgroundColor = 'purple';
+                div.style.color= 'red';
+                document.getElementById('color-name').innerHTML = 'фиолетовый';
+                document.getElementById('colorText-name').innerHTML = 'красный';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                document.getElementById('color-name').innerHTML = 'жёлтый';
+                div.style.color= 'purple';  
+                document.getElementById('colorText-name').innerHTML = 'фиолетовый';
+            }
+            
+        }
     </script>
 </head>
 
@@ -125,6 +165,11 @@
                 <li>Чтобы сыграть еще раз, нажмите кнопку "Сыграть еще раз"</li>
                 </ol>
             </div>
+        </div>
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет фона: <span id="color-name">жёлтый</span><br>
+            Цвет текста:<span id="colorText-name">фиолетовый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
         </div>
     </main>
     <footer>
