@@ -32,6 +32,22 @@
             background-color: yellow;
             
         }
+        .change {
+            border: 1px black solid;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: chartreuse;
+            color: black;
+            transition: 3s;
+            margin-top: 10px;
+        }
+        .change:hover {
+            cursor: pointer;
+        }
     </style>
     <script>
         let number;
@@ -112,7 +128,18 @@
                 div.style.color= 'purple';  
                 document.getElementById('colorText-name').innerHTML = 'фиолетовый';
             }
-            
+        }
+        let positionLeft = true;
+        function move() {
+            let position = document.getElementById('place');
+            if (positionLeft == true) {
+                position.style.transform = 'translateX(500px) rotate(0)';
+                positionLeft = false;
+            }
+            else {
+                position.style.transform = 'translateX(0px) rotate(4turn)';
+                positionLeft = true;
+            }
         }
     </script>
 </head>
@@ -164,12 +191,15 @@
                 <li>Если вы угадали число, то появится сообщение "Поздравляем, вы выиграли"</li>
                 <li>Чтобы сыграть еще раз, нажмите кнопку "Сыграть еще раз"</li>
                 </ol>
-            </div>
+              </div>
         </div>
         <div class="color" ondblclick="changeColor(this)">
             Цвет фона: <span id="color-name">жёлтый</span><br>
             Цвет текста:<span id="colorText-name">фиолетовый</span><br>
             Сделайте двойной щелчок, чтобы сменить.
+        </div>
+        <div class="change" id="place" onclick="move()">
+            <span ><p vertival-align: middle>Щёлкни меня</p></span>
         </div>
     </main>
     <footer>
