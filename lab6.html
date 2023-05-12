@@ -64,6 +64,7 @@
         .size {
             cursor: pointer;
         }
+       
     </style>
     <script>
         let number;
@@ -166,6 +167,44 @@
                 size.style.width = '100px';
             }
         }
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+
+            if(color == 'Красный' && type == 'Футболка') {
+                wear.src = 'https://ulrid.ru/image/cache/catalog/8c9b044b44c311e980f90050569b1703_15dae130458e11e980f90050569b1703-1000x1000.jpg';
+            }
+            else if(color == 'Красный' && type == 'Поло') {
+                wear.src = 'https://1souvenir.ru/d/3000/d/11575.50__1__1000x1000.jpg';
+            } 
+            else if(color == 'Красный' && type == 'Майка') {
+                wear.src = 'https://main-cdn.sbermegamarket.ru/hlr-system/-17/008/391/902/114/51/100030474551b0.jpg';
+            }
+            else if(color == 'Белый' && type == 'Футболка') {
+                wear.src = 'https://www.tekstil-vsem.ru/images/product/s/105882a4080.jpg';
+            }
+            else if(color == 'Белый' && type == 'Поло') {
+                wear.src = 'https://cdn1.ozone.ru/multimedia/1018703338.jpg';
+            }
+            else if(color == 'Белый' && type == 'Майка') {
+                wear.src = 'https://www.tekstil-vsem.ru/images/product/s/929191577b.jpg';
+            }
+            else if(color == 'Чёрный' && type == 'Футболка') {
+                wear.src = 'https://1souvenir.ru/d/3000/d/fbe10b5a-212e-11e7-942a-00155d640301.jpg';
+            }
+            else if(color == 'Чёрный' && type == 'Поло') {
+                wear.src = 'https://img.five-sport.ru/images/products/1/3578/54455802/%D0%A4%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D0%BA%D0%B0_Craft_Pique_Classic_%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F.jpg';
+            }
+            else if(color == 'Чёрный' && type == 'Майка') {
+                wear.src = 'https://www.dassimisi.ru/userfiles/image/catalog/photoimg_182850341.jpg';
+            }
+            else {
+                wear.src = 'ssss';
+            }
+        }
+            
+            
     </script>
 </head>
 
@@ -228,6 +267,29 @@
         </div>
         <div  class="size"  onclick="expansion(this)">
             <span ><p vertical-align: middle>Сделай меня шире</p></span>
+        </div>
+        <div class="shop">
+            <div class="nameshop">
+                <h1>Интернет-магазин Wildberries</h1>
+                <img src="https://free-png.ru/wp-content/uploads/2021/11/free-png.ru-419.png" height="50px" width="50px">
+            </div>
+        </div>
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Чёрный</option>
+            </select><br>
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">ОК</button><br>
+
+            <img id="wear">
         </div>
     </main>
     <footer>
