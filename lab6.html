@@ -48,6 +48,22 @@
         .change:hover {
             cursor: pointer;
         }
+        .size {
+            border: 1px black solid;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: cyan;
+            color: black;
+            transition: 1s;
+            margin-top: 10px;
+        }
+        .size {
+            cursor: pointer;
+        }
     </style>
     <script>
         let number;
@@ -141,6 +157,15 @@
                 positionLeft = true;
             }
         }
+        function expansion(size) {
+           let isSize = parseInt(getComputedStyle(size).width);
+            if(isSize < 1000) {
+                size.style.width = isSize + 50 + 'px';
+            }
+            else {
+                size.style.width = '100px';
+            }
+        }
     </script>
 </head>
 
@@ -199,7 +224,10 @@
             Сделайте двойной щелчок, чтобы сменить.
         </div>
         <div class="change" id="place" onclick="move()">
-            <span ><p vertival-align: middle>Щёлкни меня</p></span>
+            <span ><p vertical-align: middle>Щёлкни меня</p></span>
+        </div>
+        <div  class="size"  onclick="expansion(this)">
+            <span ><p vertical-align: middle>Сделай меня шире</p></span>
         </div>
     </main>
     <footer>
