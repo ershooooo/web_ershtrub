@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function Change(){
+            let inputA = document.getElementById('numberA');
+            Num = parseInt(inputA.value);
+            Num1 = parseInt(Num/100);
+            x=String(Num1);
+            Num2 = Num-Num1*100;
+            alert (Num2+x);
+        }
+        function Try() {
+            let A = document.getElementById('numA');  
+            let B = document.getElementById('numB');
+
+            A=parseInt(A.value);
+            B=parseInt(B.value);
+
+            if(A == B) {
+                alert(A*A);
+            }
+            else if(A>B) {
+                alert(A-B);
+            }
+            else {
+                alert(A+B);
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <main>
+        <label>Введите трехзначное число: <input type="number" value="" id="numberA"></label><br>
+        <input type="button" value="Изменить" onclick='Change()'><br>
+
+        <label>Введите первое целое число: <input type="number" value="" id="numA"></label><br>
+        <label>Введите второе целое число: <input type="number" value="" id="numB"></label><br>
+        <input type="button" value="Посчитать" onclick='Try()'>
+
+    </main>
+    
+</body>
+</html>
