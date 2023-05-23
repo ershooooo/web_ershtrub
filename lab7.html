@@ -51,6 +51,65 @@
                 umnozh2.appendChild(umnoz);
             }
         }
+
+        function Kurs(){
+            let date=['23.05.2023', '22.05.2023', '19.05.2023', '18.05.2023', '17.05.2023', '16.05.2023', '15.05.2023', '12.05.2023', '11.05.2023', '10.05.2023'];
+            let change=[1642.00, 1665.00, 1679.00, 1680.00, 1469.00, 1470.00, 1483.00, 1470.00, 1423.50, 1397.00];
+            let razn=['-',1665.00-1642.00, 1679.00-1665.00,1680.00-1679.00,1469.00-1680.00,1470.00- 1469.00,1483.00-1470.00,1470.00-1483.00,
+            1423.50-1470.00,1397.00-1423.50]
+
+            let table=document.getElementById('kurs-exchange'); 
+            for (i = 0; i <change.length; i++){
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                td1.innerHTML = date[i];
+                let td2 = document.createElement("td");
+                td2.innerHTML = change[i];
+                let td3 = document.createElement("td");
+                td3.innerHTML = razn[i];
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                table.appendChild(tr);
+            }
+            let sum=0;
+            for(let i=0; i<change.length; i++){
+                sum = sum+change[i];
+            }
+            let average = sum / change.length;
+            let min = Math.min.apply(Math,change)
+            let max = Math.max.apply(Math,change)
+            document.getElementById('details').innerHTML='Среднее значение: ' + average +"<br />"+ 'Минимальное значение: ' + min +"<br />" +'Максимальное значение: ' + max;
+        }
+        
+        function Kurs2(){
+            let date=['23.05.2023', '22.05.2023','20.05.2023','19.05.2023', '18.05.2023', '17.05.2023', '16.05.2023', '15.05.2023', '13.05.2023', '12.05.2023'];
+            let change=[571,593,618,599,654,666,676,684,671,672];
+            let razn=['-',593-571,618-593,599-618,654-599,666-654,676-666,684-676,671-684,672-671]
+
+            let table=document.getElementById('kurs-exchange2'); 
+            for (i = 0; i <change.length; i++){
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                td1.innerHTML = date[i];
+                let td2 = document.createElement("td");
+                td2.innerHTML = change[i];
+                let td3 = document.createElement("td");
+                td3.innerHTML = razn[i];
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                table.appendChild(tr);
+            }
+            let sum=0;
+            for(let i=0; i<change.length; i++){
+                sum = sum+change[i];
+            }
+            let average = sum / change.length;
+            let min = Math.min.apply(Math,change)
+            let max = Math.max.apply(Math,change)
+            document.getElementById('details2').innerHTML='Среднее значение: ' + average +"<br />"+ 'Минимальное значение: ' + min +"<br />" +'Максимальное значение: ' + max;
+        }
     </script>
 </head>
 <body>
@@ -70,6 +129,14 @@
 
         <button onclick="Table2()">Таблица умножения на 59</button>
         <div id="umnozh2"></div>
+
+        <button onclick="Kurs()">Курс акций АНК «Башнефть»</button>
+        <table border="1" id="kurs-exchange"></table>
+        <div id="details"></div>
+
+        <button onclick="Kurs2()">Курс акций "Полиметалл"</button>
+        <table border="1" id="kurs-exchange2"></table>
+        <div id="details2"></div>
     </main>
     <footer onclick="showAuthor()">
         &copy;Трубицына А.В, Ершова К.А., ФБИ-12, 2 курс, 2023
