@@ -33,6 +33,24 @@
             let average = sum / exchange.length;
             document.getElementById('detail').innerHTML='Среднее значение: ' + average;
         }
+
+        function Table1() {
+            let umnozh1 = document.getElementById('umnozh1');
+            for(let i=13; i<34; i++){
+                let umnoz = document.createElement('div');
+                umnoz.innerHTML = (i+'* 28 = '+(28*i));
+                umnozh1.appendChild(umnoz);
+            }
+        }
+
+        function Table2() {
+            let umnozh2 = document.getElementById('umnozh2');
+            for(let i=13; i<34; i++){
+                let umnoz = document.createElement('div');
+                umnoz.innerHTML = (i+'* 59 = '+(59*i));
+                umnozh2.appendChild(umnoz);
+            }
+        }
     </script>
 </head>
 <body>
@@ -46,6 +64,12 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="Table1()">Таблица умножения на 28</button>
+        <div id="umnozh1"></div>
+
+        <button onclick="Table2()">Таблица умножения на 59</button>
+        <div id="umnozh2"></div>
     </main>
     <footer onclick="showAuthor()">
         &copy;Трубицына А.В, Ершова К.А., ФБИ-12, 2 курс, 2023
