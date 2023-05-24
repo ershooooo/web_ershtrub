@@ -34,6 +34,19 @@
             document.getElementById('detail').innerHTML='Среднее значение: ' + average;
         }
 
+        function opacityBlock(){
+            let opacity = document.getElementById('opacity-block');
+            for (let i = 0; i < 10; i++){
+                let blockCreate = document.createElement('div');
+                blockCreate.style.opacity = (i * 10) + '%';
+                blockCreate.style.width = '100px';
+                blockCreate.style.height = '100px';
+                blockCreate.style.backgroundColor = 'green';
+                opacity.appendChild(blockCreate);
+            }
+        }
+
+
         function Table1() {
             let umnozh1 = document.getElementById('umnozh1');
             for(let i=13; i<34; i++){
@@ -110,6 +123,7 @@
             let max = Math.max.apply(Math,change)
             document.getElementById('details2').innerHTML='Среднее значение: ' + average +"<br />"+ 'Минимальное значение: ' + min +"<br />" +'Максимальное значение: ' + max;
         }
+
     </script>
 </head>
 <body>
@@ -123,6 +137,9 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="opacityBlock()">Создать полупрозрачные блоки</button>
+        <div id="opacity-block"></div>
 
         <button onclick="Table1()">Таблица умножения на 28</button>
         <div id="umnozh1"></div>
