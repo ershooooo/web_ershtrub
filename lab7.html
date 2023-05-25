@@ -46,6 +46,34 @@
             }
         }
 
+        function Circles(){
+            let swither = 0;
+            let circleInput = document.getElementById('circleInput');
+            let redButton = document.getElementById('redButton');
+            let container = document.getElementById('circleContainer');
+            let circleCount = parseInt(circleInput.value);
+            for (let i = 0; i<circleCount; i++){
+            let circle = document.createElement('div');
+            if (swither == 0){
+                circle.style.backgroundColor = 'red';
+                swither = 1;
+            }
+            else{
+                circle.style.backgroundColor = 'green';
+                swither = 0;
+            }
+            circle.style.paddingTop = '32px';
+            circle.style.paddingBottom = '32px';
+            circle.style.paddingLeft = '36px';
+            circle.style.paddingRight = '36px';
+            circle.style.display = 'inline-block';
+            circle.style.borderRadius = '200px';
+            circle.innerText = circleCount -i;
+            circle.style.marginRight = '12px';
+            container.appendChild(circle);
+            }
+        }
+
 
         function Table1() {
             let umnozh1 = document.getElementById('umnozh1');
@@ -140,6 +168,10 @@
 
         <button onclick="opacityBlock()">Создать полупрозрачные блоки</button>
         <div id="opacity-block"></div>
+
+        <input type="number" id="circleInput" value="5" placeholder="Введите число кругов">
+        <button id="redButton" onclick="Circles()">Красное/Зелёное</button>
+        <div id="circleContainer"></div>
 
         <button onclick="Table1()">Таблица умножения на 28</button>
         <div id="umnozh1"></div>
