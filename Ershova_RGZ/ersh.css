@@ -1,0 +1,78 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+}       
+/* Основные свойства для бокового меню */
+.menu {
+    display: flex;
+    flex-direction: column; /* размещаем элементы к колонку */
+    width: 240px;
+    min-height: 100vh; /* на всю высоту экрана */
+    position: fixed; /* чтобы меню было фиксированным */
+    top: 0; /* прижимаем к верхнему */
+    left: 0; /* .. и нижнему краю */
+    background-color: #ffffff;
+    box-shadow: 4px 4px 8px 0 #69bf52; /* задаем тень, чтобы отделить от фона */
+}
+/* Свойства для контента */
+.content {
+    padding-left: 280px; /* отступ от бокового меню 240px + 40px */
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    font-family: "Inter",sans-serif;
+    font-size: 20px;
+    color: #333
+}
+.logo {
+    display: flex;
+    align-items: center; /* центрируем логотип с текстом */
+    color: #69bf52;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Andale Mono';
+    font-weight: bold;
+}
+/* Позиционирование лого в меню */
+.menu__logo {
+    padding-top: 30px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+/* Позиционирование элементов в меню */
+.menu__link{
+    padding-left: 30px;
+}
+/* Свойства для элементов меню */
+.link {
+    position: relative; /* чтобы задать потом псевдоэлемент */
+    display: flex; /* чтобы элемент тянулся на всю ширину */
+    align-items: center; /* по центру текст и иконка */
+    height: 100px;
+    text-decoration:none;
+}
+li {
+    list-style-type: none;/* Убираем маркеры */
+  }
+/* Свойства текста внутри ссылки */
+.link > span {
+    font-family: "Inter",sans-serif;
+    font-size: 22px;
+    color: #333;
+}
+/* Выводим зеленую линию слева */
+.link:hover:before {
+    display: flex;
+}
+/* Создаем зеленую линию слева */
+.link:before {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #69bf52;
+}
