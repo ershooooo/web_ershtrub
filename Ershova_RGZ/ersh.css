@@ -44,16 +44,9 @@ footer{
     text-decoration: none;
     font-family: "Inter",sans-serif;
     font-weight: bold;
-}
-/* Позиционирование лого в меню */
-.menu__logo {
     padding-top: 30px;
     padding-left: 20px;
     margin-bottom: 5px;
-}
-/* Позиционирование элементов в меню */
-.menu__link{
-    padding-left: 30px;
 }
 /* Свойства для элементов меню */
 .link {
@@ -62,19 +55,28 @@ footer{
     align-items: center; /* по центру текст и иконка */
     height: 100px;
     text-decoration:none;
+    font-family: "Inter",sans-serif;
+    font-size: 22px;
+    color: #333;
+    padding-left: 30px;
+}
+.link2{
+    color: #81bb3c;
+    font-weight: bold;
 }
 li {
     list-style-type: none;/* Убираем маркеры */
   }
-/* Свойства текста внутри ссылки */
-.link > span {
-    font-family: "Inter",sans-serif;
-    font-size: 22px;
-    color: #333;
-}
 /* Выводим зеленую линию слева */
 .link:hover:before {
     display: flex;
+    
+}
+.link:hover{
+    color: #81bb3c;
+    font-weight: bold;
+    text-shadow: 7px 5px 2px rgb(181, 227, 185);
+    transition: all 0.3s;
 }
 /* Создаем зеленую линию слева */
 .link:before {
@@ -87,6 +89,7 @@ li {
     height: 100%;
     background-color: #81bb3c;
 }
+
 /* Стили слов, которые написаны в подваале */
 .footerword{
     padding:10px;
