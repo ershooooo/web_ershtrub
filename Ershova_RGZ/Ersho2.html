@@ -7,8 +7,192 @@
     <title>Ершова Клара Александровна. РГЗ по web-программированию</title>
     <link rel="stylesheet" href="ersh.css">
 </head>
-<script></script>
-<style></style>
+<script>
+  function Kurs(){
+    let date=['28.04.2023','27.04.2023','26.04.2023','25.04.2023','24.04.2023','21.04.2023','20.04.2023','19.04.2023','18.04.2023','17.04.2023','14.04.2023','13.04.2023','12.04.2023','11.04.2023','10.04.2023','07.04.2023','06.04.2023','05.04.2023','04.04.2023','03.04.2023'];
+    let change=[352.60,358.20,362.40,363.10,365.50,358.60,360,361,362,359.80,356,359,358.20,352.40,355,353.70,351.10,353.60,349.80,355.10];
+
+    let table=document.getElementById('kurs-exchange'); 
+    for (i = 0; i <change.length; i++){
+       let tr = document.createElement("tr");
+       let td1 = document.createElement("td");
+       td1.innerHTML = date[i];
+       let td2 = document.createElement("td");
+       td2.innerHTML = change[i];
+       tr.appendChild(td1);
+       tr.appendChild(td2);
+       table.appendChild(tr);
+    }
+    let sum=0;
+      for(let i=0; i<change.length; i++){
+        sum = sum+change[i];
+      }
+      let average = sum / change.length;
+      let min = Math.min.apply(Math,change)
+      let max = Math.max.apply(Math,change)
+      document.getElementById('details').innerHTML='Среднее значение: ' + average +"<br />"+ 'Минимальное значение: ' + min +"<br />" +'Максимальное значение: ' + max;
+  }
+</script>
+<style>
+  .ph11{
+    height: auto;
+    width: 1400px;
+    margin-left: -40px;
+  }
+  .block1{
+    color: rgb(255, 255, 255);
+    width: 300px;
+    margin-top: -300px;
+    margin-left: 40px;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .block2{
+    margin-top: 80px;
+    margin-left: 200px;
+    font-size: 16px;
+    width: 900px;
+    height: auto;
+  }
+  .zag{
+    font-size: 24px;
+    padding: 10px;
+    color: #81bb3c;
+  }
+  .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #81bb3c;
+    border-radius: 0.6rem;
+    width: 200px;
+    height: 60px;
+    margin-top: 2.4rem;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .b1{
+    margin-left: 180px;
+  }
+  .b2{
+    margin-left: 420px;
+    margin-top: -60px;
+  }
+  .b3{
+    margin-left: 660px;
+    margin-top: -60px;
+  }
+  .b4{
+    margin-left: 900px;
+    margin-top: -60px;
+  }
+  .cen{
+    margin-left: 40%;
+  }
+  .button2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d1efad;
+    border-radius: 0.6rem;
+    width: 200px;
+    height: 180px;
+    margin-top: 2.4rem;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: -20px;
+  }
+  .a1{
+    margin-left: 180px;
+    margin-top: -20px;
+  }
+  .a2{
+    margin-left: 420px;
+    margin-top: -180px;
+  }
+  .a3{
+    margin-left: 660px;
+    margin-top: -180px;
+  }
+  .a4{
+    margin-left: 900px;
+    margin-top: -180px;
+  }
+  .zag2{
+    font-size: 24px;
+    color: darkblue;
+    font-weight: bold;
+  }
+  .text{
+    font-size: 12px;
+    text-align: center;
+  }
+  .c1{
+    margin-left: 200px;
+    margin-top: -200px;
+    width: 150px;
+  }
+  .c2{
+    margin-left: 450px;
+    margin-top: -150px;
+    width: 150px;
+  }
+  .c3{
+    margin-left: 690px;
+    margin-top: -100px;
+    width: 150px;
+  }
+  .c4{
+    margin-left: 930px;
+    margin-top: -100px;
+    width: 150px;
+  }
+  .cen2{
+    margin-left: 270px;
+  } 
+  .button3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #81bb3c;
+    border-radius: 0.6rem;
+    width: 500px;
+    height: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-left: 370px;
+  }
+  table{
+    border: 10px solid;
+    border-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-left: 70px;
+    width: 90%;
+    height:auto;
+    background-color: #81bb3c;
+  }
+  th, td {
+    border: 1px solid #fff;
+    padding: 4px;
+    text-align: center;
+  }
+.cen3{
+  margin-left: 100px;
+  font-size: 18px;
+}
+        
+</style>
 <body>
     <header>
         <section class="menu">
@@ -46,7 +230,79 @@
             </ul>
           </section>
     </header>
-    <main></main>
+    <main>
+      <div class="content">
+        <h1>Основные финансовые показатели</h1>
+        <div>
+          <img class="ph11" src="ph11.jpg">
+        </div>
+        <div class="block1">
+          <p><h2>FIX PRICE</h2></p>
+          <p>САМЫЙ БЫСТРОРАСТУЩИЙ ИГРОК НА МИРОВОМ РЫНКЕ МАГАЗИНОВ ФИКСИРОВАННЫХ ЦЕН</p>
+        </div>
+       
+        <div class="block2">
+          <h2 class="zag">ОСНОВНЫЕ ФИНАНСОВЫЕ РЕЗУЛЬТАТЫ ЗА 1 КВАРТАЛ 2023 ГОДА</h2>
+          <p><b>Выручка</b> Группы в 1 квартале 2023 года выросла на 5,2% г/г и составила 65,9 млрд рублей на фоне роста розничной выручки на 4,9% и оптовой выручки на 7,6%</p>
+          <p><b>Розничная выручка</b> достигла 58,1 млрд рублей благодаря расширению сети. <b>Оптовая выручка</b> выросла до 7,8 млрд рублей на фоне открытия новых магазинов. Доля оптовой выручки в общей выручке Компании увеличилась на 26 б.п. г/г и достигла 11,8%.</p>
+          <p><b>Валовая прибыль</b> достигла 22,0 млрд рублей, а валовая маржа увеличилась до 33,3% за счет эффективного управления ассортиментом и товарными категориями, а также положительного воздействия укрепления рубля на себестоимость импортной продукции.</p>
+          <p>Величина <b>списания запасов</b> достигла 1,1% от выручки, что отражает более высокий уровень начислений на основании фактических потерь за прошлый год</p>
+          <p><b>Чистые финансовые расходы</b> снизились до 337 млн рублей на фоне снижения сумм кредитов и займов, а также роста процентных доходов.</p>
+          <p>В 1 квартале 2023 года <b>операционная прибыль</b> составила 7,6 млрд рублей, а <b>операционная маржа</b> – 11,5%</p>
+          <p><b>Чистая прибыль</b> за период составила 5,9 млрд рублей. <b>Рентабельность по чистой прибыли</b> за отчетный период составила 8,9%.</p>
+        </div>
+
+        <div>
+          <h2 class="zag cen">Наши показатели</h2>
+          <div class="button b1"></div>
+          <div class="button b2"></div>
+          <div class="button b3"></div>
+          <div class="button b4"></div>
+          <div class="button2 a1"></div>
+          <div class="button2 a2"></div>
+          <div class="button2 a3"></div>
+          <div class="button2 a4"></div>
+          <div class="text">
+            <div class="c1">
+              <p class="zag2">5 800+</p>
+              <p>магазинов</p>
+              <p class="zag2">90%</p>
+              <p>доля на рынке магазинов фиксированных цен</p>
+            </div>
+            <div class="c2">
+              <p class="zag2">70%</p>
+              <p>ROIC за 2022 г.</p>
+            </div>
+            <div class="c3">
+              <p class="zag2">20%</p>
+              <p>темп роста выручки за 2022 г.</p>
+            </div>
+            <div class="c4">
+              <p class="zag2">19.5%</p>
+              <p>рентабельность по EBITDA за 2022 г.</p>
+            </div>
+          </div>
+        </div>
+        <div class="block2">
+          <h2 class="zag cen2">Расширение сети магазинов</h2>
+          <p>По состоянию на 31 марта 2023 года общее количество магазинов достигло 5 848, увеличившись на 15,1% за последние 12 месяцев. Доля франчайзинговых магазинов не изменилась и составила 11,0% от общего количества магазинов сети </p>
+          <p>Общее количество чистых открытий в 1 квартале 2023 года составило 185 магазинов, включая 167 магазинов под управлением Компании и 18 франчайзинговых магазинов, по сравнению со 179 магазинами в 1 квартале 2022 года, включая 155 магазинов под управлением Компании и 24 франчайзинговых магазина</p>
+          <p>В 1 квартале 2023 года Компания закрыла 31 магазин под собственным управлением, по сравнению с 33 магазинами в 1 квартале 2022 года. Большинство закрытий было направлено на улучшение условий аренды</p>
+          <p>В 1 квартале 2023 года Fix Price продолжил расширение сети как в России, так и за рубежом: 14,6% чистых открытий пришлось на зарубежные рынки, а доля зарубежных магазинов в общем количестве магазинов сети выросла до 10,1% по сравнению с 9,5% на 31 марта 2022 года</p>
+          <p>В 1 квартале 2023 года общая торговая площадь магазинов Fix Price увеличилась на 40,9 тыс. кв. м и составила 1 266,3 тыс. кв. м (рост на 15,5% г/г). Средняя торговая площадь магазина Fix Price на 31 марта 2023 года практически не изменилась г/г, составив 217 кв. м</p>
+        </div>
+
+        <button class="button3" onclick="Kurs()">Стоимость акций за апрель 2023</button>
+        <table class="tab" id="kurs-exchange"></table>
+        
+        
+        <div>
+          <h2 class="zag cen">Показатели акций</h2>
+          <div class="cen3" id="details"></div>
+        </div>
+      
+      </div>
+    </main>
     <footer>
         <div class="footerword">
           Есть вопрос? Отправьте его нам с помощью<br>
