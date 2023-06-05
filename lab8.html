@@ -7,20 +7,47 @@
     <title>Трубицына А.В, Ершова К.А.. Лабораторная 8</title>
     <link rel="stylesheet" href="main.css">
     <script src="lab8.js"></script>
+    <style>
+        button{
+            background-color: rgb(244, 189, 245);
+            border-color: rgb(125, 186, 224);
+            border-radius: 2px;
+            color: cornflowerblue;
+            width: 150px;
+            height: 80px;
+            margin-left: 150px;
+        }
+        input{
+            width: 150px;
+            height: 40px;
+            background-color: rgb(222, 189, 245);
+            color: rgb(255, 255, 255);
+            border-color: rgb(255, 255, 255);
+        }
+        .textdays{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            
+        }
+    </style>
 <body onload="showDate()">
     <header>
         НГТУ, ФБ, Лабораторная работа 8
     </header>
     <main>
         <div id="current-date"></div>
-        
+
+        <br>
+
+        <div><label class="textdays">Дата рождения:<input type="date"></label></div>
+        <br>
+        <div><button onclick="showDaysCount()">Показать число дней</button></div>
+        <div class="textdays" id="days"></div>
+
         <div>
-            <label>Дата рождения:<input type="date"></label>
+            <button onclick="cleanAll()">Очистить</button>
         </div>
-        <div>
-            <button onclick="showDaysCount()">Показать число дней</button>
-        </div>
-        <div id="days"></div>
+
     </main>
     <footer>
         &copy;Трубицына А.В, Ершова К.А., ФБИ-12, 2 курс, 2023

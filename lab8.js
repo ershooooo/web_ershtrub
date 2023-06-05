@@ -10,12 +10,16 @@ function showDate(){
 }
 
 function showDaysCount(){
-    let days=document.getElementById('days'); 
     let today = new Date(); /*Определяем текующую дату*/
     let inputDate = document.querySelector('input[type=date]');/*Поиск тега с датой*/
     let birthday = new Date(inputDate.value);/*Берем значение*/
-    let daysCount = (today-birthday); /*Высчитываем дни*/
-    daysCount = Math.floor(daysCount)/1000/60/60/24;/*Округляем*/
-    daysCount.innerHTML=('Количество дней с даты рождения: '+daysCount);
-    days.appendChild(daysCount);
+    let daysCount = (today-birthday)/1000/60/60/24; /*Высчитываем дни*/
+    daysCount = Math.floor(daysCount);/*Округляем*/
+    document.getElementById('days').innerHTML='Количество дней с даты рождения: ' + daysCount
+}
+
+function cleanAll(){
+    document.getElementById('days').innerHTML='';
+    let inputDate = document.querySelector('input[type=date]');
+    inputDate.value='';
 }
