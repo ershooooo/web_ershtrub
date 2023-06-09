@@ -18,6 +18,14 @@ function showDaysCount(){
     document.getElementById('days').innerHTML='Количество дней с даты рождения: ' + daysCount
 }
 
+{
+    function showTime()
+    let today = new Date();
+    let currentTime = today/toLocaleString('ru-RU');
+    document.getElementById('time').innerHTML = currentTime;
+}
+setInterval(showTime, 1000);
+
 function cleanAll(){
     document.getElementById('days').innerHTML='';
     let inputDate = document.querySelector('input[type=date]');
